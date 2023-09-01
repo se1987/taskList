@@ -5,6 +5,38 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div class="title">
+    <h1>TaskList</h1>
+    <h2 id="today"></h2>
+  </div>
+  <div class ="content"></div>
+    <div class = "wapper">
+      <h2>ToDoリスト</h2>
+      <section>
+        <form action="#" id="form">
+          <input type="text" name="word">
+          <input type="submit" value="追加">
+        </form>
+      </section>
+      <ul class = "toDo">
+        <li>
+          <input type="checkbox" id="checkbox" name="task" value="task1"/>
+          task1
+          <button type="submit" name="delete_btn" value="task1">削除</button>
+        </li>
+      </ul>
+    </div>
+    <div class = "wapper">
+      <h2>完了リスト</h2>
+      <ul class = "done">
+        <li>
+          <input type="checkbox" id="checkbox" name="task" value="task2" checked/>
+          task2
+          <button type="submit" name="delete_btn" value="task2">削除</button>
+        </li>
+      </ul>
+    </div>
+  </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
