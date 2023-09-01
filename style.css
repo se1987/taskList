@@ -7,8 +7,8 @@ html {
 body {
     font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "sans-serif";
     line-height: 1.7;
-    color: #7f3762;
-    background-color: #d9c5bf;
+    color: #1f3d89;
+    background-color: #f8f5de;
 }
 
 a {
@@ -16,7 +16,9 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 li {
@@ -25,8 +27,26 @@ li {
 
 .title {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
-    background-color: #c6b6d2;
+    align-items: center;
+    background-color: #69c4d0;
+    color: #f8f5de;
     padding: 20px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.box {
+    border-style: solid;
+    padding: 25px;
+    max-width: 500px;
+    justify-content: center;
+}
+
+#form {
+    margin: 30px;
+    text-align:center;
 }

@@ -7,31 +7,32 @@
 <body>
   <div class="title">
     <h1>TaskList</h1>
+    <img src="img/discordIcon.JPG" alt="アイコン">
     <h2 id="today"></h2>
   </div>
   <div class ="content"></div>
     <div class = "wapper">
-      <h2>ToDoリスト</h2>
       <section>
         <form action="#" id="form">
           <input type="text" name="word">
           <input type="submit" value="追加">
         </form>
       </section>
-      <ul class = "toDo">
+      <h2>ToDoリスト</h2>
+      <ul class = "toDo box">
         <li>
           <input type="checkbox" id="checkbox" name="task" value="task1"/>
-          task1
+          リーダブルコードを読む
           <button type="submit" name="delete_btn" value="task1">削除</button>
         </li>
       </ul>
     </div>
     <div class = "wapper">
       <h2>完了リスト</h2>
-      <ul class = "done">
+      <ul class = "done box">
         <li>
           <input type="checkbox" id="checkbox" name="task" value="task2" checked/>
-          task2
+          課題を復習
           <button type="submit" name="delete_btn" value="task2">削除</button>
         </li>
       </ul>

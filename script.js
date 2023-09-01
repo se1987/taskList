@@ -8,7 +8,26 @@ let day = date.getDate();
 
 document.getElementById("today").textContent = `${year}年${month}月${day}日`;
 
-const todoList = ["toDoリストの作成","リーダブルコードを読む"];
+//　削除ボタンの制御
+let buttons = document.getElementsByName("delete_btn");
+
+buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        let listItem = button.parentNode;
+        listItem.parentNode.removeChild(listItem);
+    });
+});
+
+// ToDoリスト → 完了リスト
+let checkbox = document.querySelector('input[type="checkbox"]');
+    
+checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+        const target = document.getElementsByClassName("done")[0];
+        let listItem = checkbox.parentNode;
+        target.appendChild(listItem);
+    }
+});
 
 // ToDoリストに新しいタスクを追加する
 let parentElement = document.getElementsByClassName("toDo")[0];
@@ -21,12 +40,21 @@ function addTodo (parentElement) {
     todoSpan.textContent = newTodo;
     newList.appendChild(todoSpan);
 
+// チェックボックス設定
     const check = document.createElement("input");
     check.type = 'checkbox';
     check.className = 'checkbox';
     check.value = newTodo;
     newList.textContent = newTodo;
-
+// チェックボックスにイベントリスナーを追加
+    check.addEventListener("change", function () {
+        if (check.checked) {
+            const target = document.getElementsByClassName("done")[0];
+            let listItem = check.parentNode;
+            target.appendChild(listItem);
+        }
+    });
+// 削除ボタン設定
     const button = document.createElement("button");
     button.type = 'submit';
     button.textContent = "削除";
@@ -51,25 +79,4 @@ document.getElementById("form").onsubmit = function(event){
     return addTodo(parentElement);
 };
 
-//　削除ボタンの制御
-let buttons = document.getElementsByName("delete_btn");
 
-buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
-        let listItem = button.parentNode;
-        listItem.parentNode.removeChild(listItem);
-    });
-});
-
-// ToDoリスト → 完了リスト
-let checkboxes = document.querySelectorAll(".toDo input[type='checkbox']");
-
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener("change", function() {
-        if (checkbox.checked === true) {
-            const target = document.querySelector(".done ul");
-            let listItem = checkbox.parentNode;
-            target.appendChild(listItem.parentNode);
-        } 
-    });
-});
