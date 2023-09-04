@@ -11,6 +11,10 @@ body {
     background-color: #f8f5de;
 }
 
+h2 {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }
@@ -31,7 +35,7 @@ li {
     text-align: center;
     align-items: center;
     background-color: #69c4d0;
-    color: #f8f5de;
+    color: #fff;
     padding: 20px;
 }
 
@@ -40,13 +44,23 @@ li {
 }
 
 .box {
+    margin-left: auto;
+    margin-right: auto;
     border-style: solid;
     padding: 25px;
     max-width: 500px;
-    justify-content: center;
+    align-items: center;
 }
 
 #form {
     margin: 30px;
     text-align:center;
+}
+
+#doneTitle {
+    color: #84b9e5;
+}
+
+.done {
+    color: #84b9e5;
 }
